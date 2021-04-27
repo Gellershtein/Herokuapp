@@ -10,7 +10,7 @@ import static org.testng.Assert.assertTrue;
 
 public class CheckboxesTest extends BaseTest {
     @Test
-    public void CheckboxesCheckUncheckTest() {
+    public void checkboxesCheckUncheckTest() {
         logIn(driver);
         driver.get("http://the-internet.herokuapp.com/checkboxes");
         List<WebElement> checkboxes = driver.findElements(By.cssSelector("[type=checkbox]"));
