@@ -12,7 +12,7 @@ import static org.testng.Assert.assertTrue;
 
 public class DropdownTest extends BaseTest {
     @Test
-    public void selectDropdownOptionsTest() {
+    public void selectDropdownOptions() {
 
         List<String> defaultOptionsList = new ArrayList<>();
         defaultOptionsList.add("Please select an option");
