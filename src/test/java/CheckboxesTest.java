@@ -8,7 +8,7 @@ import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 
-public class CheckboxesCheckUncheckTest extends BaseTest {
+public class CheckboxesTest extends BaseTest {
     @Test
     public void CheckboxesCheckUncheckTest() {
         logIn(driver);
