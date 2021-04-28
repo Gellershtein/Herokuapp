@@ -13,8 +13,6 @@ public class TyposTest extends BaseTest {
                 "Powered by Elemental Selenium";
         driver.get("http://the-internet.herokuapp.com/typos");
         String real = driver.findElement(By.tagName("body")).getText();
-
         assertEquals(real, original, "Тексты не совпадают");
-
     }
 }

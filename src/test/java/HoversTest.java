@@ -14,7 +14,6 @@ public class HoversTest extends BaseTest {
     @Test
     public void checkHoversFunctionality() {
         driver.get("http://the-internet.herokuapp.com/hovers");
-
         List<WebElement> avatars = driver.findElements(By.className("figure"));
 //        for (int i = 1; i < 4; i++) {
 //            userNameParserAndCheck(avatars, i);
@@ -31,7 +30,6 @@ public class HoversTest extends BaseTest {
     }
 
     public void userNameParserAndCheck(List<WebElement> avatars, int avatarNumber) {
-
         Actions action = new Actions(driver);
         action.moveToElement(avatars.get(avatarNumber - 1)).build().perform();
         //String userName = driver.findElement(By.tagName("h5")).getText().split(" ")[1];
@@ -47,14 +45,13 @@ public class HoversTest extends BaseTest {
 
     public void clickViewProfileAnd404Check(List<WebElement> avatars, int avatarNumber) {
         Actions action = new Actions(driver);
-        driver.get("http://the-internet.herokuapp.com/hovers");
         action.moveToElement(avatars.get(avatarNumber - 1)).build().perform();
         driver.findElement(By.linkText("View profile")).click();
         boolean errorMessage = driver.getPageSource().contains("Not Found");
 //        assertFalse(errorMessage, "Page is Not Found");//In real life need to use it
 
         assertTrue(errorMessage, "Page is Found");//Expected NOT
-
+        driver.navigate().back();
     }
 
     public void clickViewProfileAnd404Check(WebDriver driver, Actions action, List<WebElement> avatars, int avatarNumber) {

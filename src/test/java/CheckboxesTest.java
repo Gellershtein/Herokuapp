@@ -9,9 +9,9 @@ import static org.testng.Assert.assertTrue;
 
 
 public class CheckboxesTest extends BaseTest {
+
     @Test
     public void checkboxesCheckUncheck() {
-
         driver.get("http://the-internet.herokuapp.com/checkboxes");
         List<WebElement> checkboxes = driver.findElements(By.cssSelector("[type=checkbox]"));
         //First checkbox
@@ -23,5 +23,4 @@ public class CheckboxesTest extends BaseTest {
         checkboxes.get(1).click();
         assertFalse(checkboxes.get(1).isSelected(), "Чекбокс отмечен");
     }
-
 }

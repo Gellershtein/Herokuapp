@@ -11,6 +11,7 @@ import static org.testng.Assert.assertTrue;
 
 
 public class DropdownTest extends BaseTest {
+
     @Test
     public void selectDropdownOptions() {
 
@@ -31,8 +32,6 @@ public class DropdownTest extends BaseTest {
         //select and check second option
         optionsList.get(2).click();
         assertEquals(select.getFirstSelectedOption().getText(), "Option 2", "Option 2 isn't selected");
-
-
     }
 
     public boolean compareDropdownList(List<String> defaultOptionsList, List<WebElement> optionsList) {

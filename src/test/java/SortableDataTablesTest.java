@@ -6,11 +6,10 @@ import java.util.List;
 
 import static org.testng.Assert.assertTrue;
 
-
 public class SortableDataTablesTest extends BaseTest {
+
     @Test
     public void checkboxesCheckUncheck() {
-
         driver.get("http://the-internet.herokuapp.com/tables");
         List<WebElement> table1 = driver.findElements(By.xpath("//table[1]//tbody//tr"));
         List<WebElement> table2 = driver.findElements(By.xpath("//table[2]//tbody//tr"));
