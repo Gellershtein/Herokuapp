@@ -18,14 +18,15 @@ public abstract class BaseTest {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
-//    @AfterMethod(alwaysRun = true)
-//    public void tearDown() {
-//        driver.quit();
-//    }
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() {
+        driver.quit();
+    }
 
     public void logIn(WebDriver driver) {
         driver.get("http://the-internet.herokuapp.com/login");
