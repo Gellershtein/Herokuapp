@@ -19,7 +19,7 @@ public abstract class BaseTest {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        options.addArguments("--headless");
+//        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
@@ -27,6 +27,10 @@ public abstract class BaseTest {
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
         driver.quit();
+    }
+
+    public void hover(WebElement webElement) {
+
     }
 
     public void logIn(WebDriver driver) {
@@ -41,3 +45,4 @@ public abstract class BaseTest {
                 "Аккаунт не залогировался");
     }
 }
+
