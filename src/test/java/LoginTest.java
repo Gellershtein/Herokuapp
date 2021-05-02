@@ -18,6 +18,6 @@ public class LoginTest extends BaseTest {
         userName.submit();
         boolean logOutButton = driver.findElement(By.cssSelector(".secondary")).isDisplayed();
         assertTrue(logOutButton,
-                "Аккаунт не залогировался");
+                "Аккаунт не залогинился");
     }
 }
