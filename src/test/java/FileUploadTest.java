@@ -3,7 +3,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
-public class FileUploadTest extends BaseTest{
+public class FileUploadTest extends BaseTest {
 
     @Test
     public void uploadFileToSite() {
