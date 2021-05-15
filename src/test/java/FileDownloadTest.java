@@ -17,8 +17,8 @@ public class FileDownloadTest extends BaseTest {
         Thread.sleep(2000, 1);
         File folder = new File(System.getProperty("user.dir"));
         File[] listOfFiles = folder.listFiles();
-        boolean found = false;
-        File f = null;
+        boolean isFound = false;
+        File foundedFile = null;
 
         //Look for the file in the files
         // You should write smart REGEX according to the filename
@@ -27,12 +27,12 @@ public class FileDownloadTest extends BaseTest {
                 String fileName = listOfFile.getName();
                 System.out.println("File " + listOfFile.getName());
                 if (fileName.matches(downloadedFileName)) {
-                    f = new File(fileName);
-                    found = true;
+                    foundedFile = new File(fileName);
+                    isFound = true;
                 }
             }
         }
-        assertTrue(found, "Downloaded document is not found");
-        f.deleteOnExit();
+        assertTrue(isFound, "Downloaded document is not found");
+        foundedFile.deleteOnExit();
     }
 }
